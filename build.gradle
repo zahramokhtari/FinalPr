@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0-Beta"
+    }
+}
+
+plugins {
+    id 'org.jetbrains.intellij' version '1.15.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0-Beta'
+}
+
+group 'org.zahramokhtari'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://plugins.gradle.org/m2/'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0-Beta"
+    implementation "org.apache.httpcomponents:httpclient:4.5.13"
+    implementation 'org.json:json:20201115'
+}
+
+intellij {
+    version = "2023.1.2"
+}
+
+patchPluginXml {
+    changeNotes = """
+      Icon added<br>
+      <em>GUI changes</em>"""
+}

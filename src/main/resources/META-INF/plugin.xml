@@ -1,0 +1,42 @@
+<idea-plugin>
+    <id>org.zahramokhtari.FinalPr</id>
+    <name>Suggest Library</name>
+    <vendor email="mokhtariii.zahraaa@gmail.com" url="https://github.com/zahramokhtari">Zahra Mokhtari</vendor>
+
+    <description><![CDATA[
+    The SuggestLibrary plugin is a tool that suggests useful
+    libraries to users based on their project's dependencies.
+    It analyzes the user's pom.xml file and sends it to a
+    recommendation API, which returns a list of recommended
+    libraries. The plugin adds a "Suggest Libraries" button
+    to the main menu bar of IntelliJ IDEA, allowing users to
+    quickly explore and select the libraries that best fit
+    their needs.
+
+    With SuggestLibrary, you can save time and effort
+    by automating the process of finding and selecting
+    libraries for your project. Whether you're a beginner
+    or an experienced developer, SuggestLibrary can help
+    you discover new and relevant libraries that can
+    improve your project's functionality and performance.
+
+    Note: Some recommended libraries may not be compatible
+    with your project. Please use caution when selecting
+    and integrating new libraries.
+
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <group id="MyPlugin" text="Suggest Library">
+            <add-to-group group-id="ToolbarRunGroup" anchor="first" />
+            <action id="suggestLibrary" class="org.zahramokhtari.myaction.SuggestLibraryAction" icon="/icons/myAction.svg" text="Find Libraries" />
+        </group>
+    </actions>
+
+</idea-plugin>
