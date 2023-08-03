@@ -16,7 +16,7 @@ plugins {
 }
 
 group 'org.zahramokhtari'
-version '1.1-SNAPSHOT'
+version '1.2-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -37,6 +37,6 @@ intellij {
 
 patchPluginXml {
     changeNotes = """
-      Icon added<br>
+      bottom place has changed to EditorPopupMenu<br>
       <em>GUI changes</em>"""
 }

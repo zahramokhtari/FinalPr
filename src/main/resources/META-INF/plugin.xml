@@ -32,11 +32,12 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <actions>
+   <actions>
         <group id="MyPlugin" text="Suggest Library">
-            <add-to-group group-id="ToolbarRunGroup" anchor="first" />
+            <add-to-group group-id="EditorPopupMenu" anchor="first" />
             <action id="suggestLibrary" class="org.zahramokhtari.myaction.SuggestLibraryAction" icon="/icons/myAction.svg" text="Find Libraries" />
         </group>
     </actions>
+
 
 </idea-plugin>
